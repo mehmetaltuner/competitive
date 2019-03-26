@@ -8,8 +8,25 @@
 
 using namespace std;
 
+int res, v, n;
+
 int main(int argc, char const *argv[])
 {
-	
+	cin >> n >> v;
+	res = INT_MAX/2;
+
+	if(v >= n-1){
+		cout << n-1;
+		return 0;
+	}
+
+	res = v;
+
+	for(int i=2; i<=n-v; i++){
+		res += i;
+	}
+
+	cout << res;
+
 	return 0;
 }
